@@ -1,11 +1,11 @@
 # OpenCV 4.11 Experimentation for Autonomous Navigation
 
-This repository contains a collection of Python scripts for experimenting with computer vision using OpenCV version 4.11.  
-The project was initially started to support autonomous navigation research for the University Rover Challenge (URC).
+This repository contains a collection of Python scripts for experimenting with computer vision using OpenCV version 4.11+ (api overhaul).  
+The project was initially started to support autonomous navigation research for the University Rover Challenge (URC). But now I will literally use this for whatever weird projects come to fruition. 
 
 ---
 
-## 🚩 About The Project
+## About The Project
 
 The primary goal of this repository is to serve as a development and testing ground for various computer vision techniques. These experiments are foundational steps towards building a robust autonomous navigation stack.
 
@@ -17,7 +17,7 @@ The primary goal of this repository is to serve as a development and testing gro
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
@@ -27,8 +27,8 @@ Make sure you have **Python** and **OpenCV** installed on your system:
 
 ```bash
 # Python 3.x
-# OpenCV 4.11
-pip install opencv-python==4.11.*
+# OpenCV 4.11+
+pip install opencv-python==4.11+
 
 # NumPy
 pip install numpy
@@ -67,38 +67,13 @@ python detectMarkers.py
 **Calibrate your camera:**
 ```bash
 python cameraCalibration.py
-# Note: You may need a checkerboard pattern for this.
+# Note: You need checkerboard pattern for this (pose estimation doesn't work well without it).
 ```
 
 ---
 
-## 📂 File Descriptions
+## Future Goals
 
-Here's a brief overview of the key files in this repository:
-
-| File Name             | Description                                                                  |
-|-----------------------|------------------------------------------------------------------------------|
-| `generateMarkers.py`  | Generates ArUco markers that can be printed and used for detection.          |
-| `detectMarkers.py`    | Detects ArUco markers using a webcam or video feed.                          |
-| `cameraCalibration.py`| A script to calibrate the camera and save the calibration matrix.             |
-| `poseEstimation.py`   | Estimates the 3D pose of a detected ArUco marker relative to the camera.     |
-| `beginnerDetection.py`| A simple example script for basic object detection (e.g., color-based).      |
-| `detectAirpods.py`    | An experimental script to detect specific objects like AirPods.              |
+The long-term vision for this work is to integrate these computer vision modules into small weird OpenCV projects. The motivation is that OpenCV is heavily used in my clubs, so anything I find interesting I will place in here!
 
 ---
-
-## 🎯 Future Goals
-
-The long-term vision for this work is to integrate these computer vision modules into a cohesive autonomous navigation stack for the URC rover. This includes:
-
-- [ ] Real-time GPS-denied navigation using visual markers.
-- [ ] Integration with ROS (Robot Operating System).
-- [ ] Face detection series with HugginFace or similar
-- [ ] Filter/ML filters and application
-
----
-
-## 🙏 Acknowledgments
-
-- [OpenCV Documentation](https://docs.opencv.org/)
-- [University Rover Challenge (URC)](http://urc.marssociety.org/)
