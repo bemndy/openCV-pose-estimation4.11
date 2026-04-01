@@ -1,4 +1,4 @@
-# OpenCV 4.11 Experimentation for Autonomous Navigation
+# OpenCV 4.11+ Experimentation
 
 This repository contains a collection of Python scripts for experimenting with computer vision using OpenCV version 4.11+ (api overhaul).  
 The project was initially started to support autonomous navigation research for the University Rover Challenge (URC). But now I will literally use this for whatever weird projects come to fruition. 
